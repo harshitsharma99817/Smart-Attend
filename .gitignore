@@ -1,0 +1,11 @@
+.venv/
+**pycache**/
+*.pyc
+
+data/faces/
+data/students.json
+data/attendance.csv
+data/face_model.yml
+data/face_labels.json
+
+.env
