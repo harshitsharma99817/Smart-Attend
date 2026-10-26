@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>SmartAttend</h2>
+       <span class="demo-badge">DEMO MODE</span>
+       <p class="subtitle">Multimodal Attendance Agent</p>
+        <nav>
+            <a href="#dashboard" class="active">Dashboard</a>
+            <a href="#students">Students</a>
+            <a href="#attendance">Attendance Records</a>
+        </nav>
+        <p class="sidebar-footer">College Project Demo</p>
+    </aside>
+
+```
+<main class="main-content">
+    <header>
+        <div>
+            <h1>Attendance Dashboard</h1>
+            <p>Manage students and monitor attendance.</p>
+        </div>
+        <span id="today"></span>
+    </header>
+
+    <section id="dashboard" class="stats">
+        <article class="card">
+            <p>Total Students</p>
+            <h2 id="totalStudents">0</h2>
+        </article>
+         <article class="card">
+            <p>Present Today</p>
+            <h2 id="presentToday">0</h2>
+        </article>
+        <article class="card">
+            <p>Attendance Rate</p>
+            <h2 id="attendanceRate">0%</h2>
+        </article>
+         <article class="card">
+            <p>Absent Today</p>
+            <h2 id="absentToday">0</h2>
+        </article>
+    </section>
+
+    <section id="students" class="panel">
+        <h2>Register Student</h2>
+        <form id="studentForm">
+            <input id="studentName" type="text" placeholder="Student name" required>
+            <input id="rollNumber" type="text" placeholder="Roll number" required>
+            <button type="submit">Add Student</button>
+        </form>
+        <p id="studentMessage" class="message"></p>
+
+        <h2 class="section-heading">Student List</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Roll Number</th><th>Name</th></tr>
+                </thead>
+                <tbody id="studentTable">
+                    <tr><td colspan="2">Loading students...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="attendance" class="panel">
+        <div class="section-title">
+            <h2>Attendance Records</h2>
+            <button id="refreshButton" class="secondary">Refresh</button>
+            <button type="button" id="downloadReportButton">Download Report</button>
+        </div>
+        <div class="attendance-filters">
+    <label for="attendanceFilter">Filter attendance:</label>
+
+    <select id="attendanceFilter">
+        <option value="All">All Records</option>
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+    </select>
+
+    <button type="button" id="resetDemoButton">
+        Reset Demo
+    </button>
+</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll Number</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable">
+                    <tr><td colspan="5">Loading attendance...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="attendanceMessage" class="message"></p>
+    </section>
+
+    <footer>SmartAttend · Multimodal Attendance and Engagement Agent</footer>
+</main>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>

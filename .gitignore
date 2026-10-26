@@ -1,6 +1,6 @@
 .venv/
 **pycache**/
-*.pyc
+*.py[cod]
 
 data/faces/
 data/students.json
@@ -9,3 +9,6 @@ data/face_model.yml
 data/face_labels.json
 
 .env
+.vscode/
+.DS_Store
+Thumbs.db
